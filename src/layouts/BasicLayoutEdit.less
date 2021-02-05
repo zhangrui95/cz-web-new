@@ -1,0 +1,119 @@
+@import '~antd/es/style/themes/default.less';
+
+:global {
+  .ant-layout {
+    min-height: 100%;
+    z-index: 100;
+  }
+
+  .ant-menu.ant-menu-dark .ant-menu-item-selected {
+    background-color: transparent;
+  }
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  .logos {
+    width: 50px;
+    height: 50px;
+  }
+
+  .logoss {
+    width: 50px;
+    height: 50px;
+    margin-right: 0;
+  }
+  .logoTimes{
+      margin:  0 auto;
+      position: fixed;
+    top: 0;
+    right: 0;
+    width: calc(100% - 100px);
+    text-align: center;
+  }
+  .logoTitle {
+    margin-left: 20px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 22px;
+  }
+  
+  .logoInfo{
+    position: absolute;
+    top: 10px;
+    right: 100px;
+    height: 100%;
+  }
+  .screen{
+    display: inline-block;
+    height: 100%;
+    .screentile{
+        font-size:16px;
+        font-family:Microsoft YaHei;
+        font-weight:400;
+        color:rgba(0,244,255,1);
+        // line-height: 64px;
+        margin-top: -25px;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 6px;
+    }
+    .screenIcon{
+        margin-top: -25px;
+        margin-right: 10px;
+        cursor: pointer;
+        vertical-align: middle;
+    }
+  }
+  .headInfo{
+      display: inline-block;
+      height: 100%;
+    .headInfoName{
+        font-size: 16px;
+        font-family: Microsoft YaHei;
+        font-weight: 400;
+        color: rgba(255,255,255,1);
+        /* line-height: 48px; */
+        margin-bottom: 0;
+        line-height: 20px;
+    }
+    
+    .headInfoInstitutions{
+        font-size: 12px;
+        font-family: Microsoft YaHei;
+        font-weight: 400;
+        color: rgba(255,255,255,1);
+        /* line-height: 48px; */
+        opacity: 0.5;
+        line-height: 30px;
+    }
+}
+}
+
+.memuListItem {
+  height: 90px;
+  line-height: 90px;
+
+  .link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .selete {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 51px;
+    height: 51px;
+    border-radius: 9px;
+  }
+
+  .itemImage {
+    width: 49px;
+    height: 49px;
+  }
+}

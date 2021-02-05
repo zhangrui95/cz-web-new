@@ -1,0 +1,76 @@
+.videoCon{
+    position: relative;
+    .circleBtn{
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        opacity: 0.5; 
+        width: 60px;
+    height: 60px;
+    border: 1px solid #fff;
+    z-index: 1000;
+    }
+    .circleBtn:hover{
+        opacity: 1;
+    }
+    .muneBtns{
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        transition: all 1.2s ease;
+        z-index: 1000;
+        .back{
+            width: 67px;
+            height: 65px;
+            background-image: linear-gradient(#00c1fd, #007ff4);
+            float: left;
+            border: 1px solid #fff;
+            text-align: center;
+            padding: 10px;
+            border-top-right-radius: 8px;
+            border-bottom-right-radius: 8px;
+            cursor: pointer;
+        
+        }
+        .btns{
+            width: 101px;
+            height: 65px;
+            vertical-align: middle;
+            background-image: linear-gradient(#00c1fd, #007ff4);
+            float: left;
+            border: 1px solid #fff;
+            text-align: center;
+            border-right: 0px;
+            padding: 20px 10px;
+            cursor: pointer;
+        }
+        .btns:nth-child(1){
+            border-top-left-radius: 8px;
+            border-bottom-left-radius: 8px;
+        }
+        :global{
+            .ant-btn-group .ant-btn-primary:first-child:not(:last-child) {
+                border-right-color: #fff;
+            }
+            .ant-btn-group .ant-btn-primary:last-child:not(:first-child), .ant-btn-group .ant-btn-primary + .ant-btn-primary{
+                border-left-color: #fff;
+            }
+        }
+    }
+}
+:global{
+    .v-enter,
+    .v-leave-to {
+      opacity: 0;
+      transform: translateX(150px);
+    }
+
+    /* v-enter-active 【入场动画的时间段】 */
+    /* v-leave-active 【离场动画的时间段】 */
+    .v-enter-active,
+    .v-leave-active{
+      transition: all 1.2s ease;
+    }
+
+}
+

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>图片</title>
+    <style>
+        body,html{
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 100%;
+            height: 100%;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+        }
+        
+    </style>
+</head>
+<body>
+    <div>
+        <img src="" id='imgs' alt="">
+    </div>
+    <script src="./js/jquery.min.js" ></script>
+    <script>
+        var Request = new Object();
+        Request = GetRequest();
+        console.log(Request)
+
+      
+        document.getElementById('imgs').src = Request.srcImg
+        function GetRequest() {
+            var url = decodeURI(decodeURI(location.search)); //获取url中"?"符后的字串
+            var theRequest = new Object();
+            if (url.indexOf("?") != -1) {
+                var str = url.substr(1);
+                strs = str.split("&");
+                for (var i = 0; i < strs.length; i++) {
+                    theRequest[strs[i].split("=")[0]] = unescape(strs[i].split("=")[1]);
+                }
+            }
+            return theRequest;
+        }
+        
+    </script>
+</body>
+</html>

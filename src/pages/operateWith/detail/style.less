@@ -1,0 +1,196 @@
+@import '~antd/es/style/themes/default.less';
+@import '../../../utils/pagination.less';
+@thems-color: hsl(229, 42%, 21%);
+
+:global {
+    .ant-card-bordered{border:0;}}
+.synergyDetail {
+	background: #323d70;
+	// height: 700px;
+	padding: 20px;
+	box-sizing: border-box;
+	
+	.list {
+		.titleBig {
+			font-size: 18px;
+			font-family: Microsoft YaHei;
+			font-weight: 400;
+			color: #ffffff;
+			position: relative;
+			height: 33px;
+		}
+		.titleBig::after {
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: 160px;
+			height: 2px;
+			background: #5ec8f8;
+			content: '';
+		}
+		.time {
+			font-size: 14px;
+			font-family: Microsoft YaHei;
+			font-weight: 400;
+			margin-top: 25px;
+			color: #ffffff;
+		}
+		.con {
+			width: 100%;
+			overflow: hidden;
+			margin-top: 20px;
+			.title {
+				font-size: 16px;
+				font-family: Microsoft YaHei;
+				font-weight: bold;
+				color: #5fc7f9;
+				margin-bottom: 19px;
+			}
+			.participants {
+				float: left;
+				width: 50%;
+				height: 538px;
+				overflow-y: auto;
+				padding-right: 17px;
+				box-sizing: border-box;
+				.bodys {
+					width: 100%;
+					.icons {
+						float: left;
+						margin-right: 8px;
+						width: 17px;
+						img {
+							width: 17px;
+							height: 14px;
+						}
+					}
+					.velist {
+						float: left;
+						width: calc(100% - 25px);
+						.item {
+							overflow: hidden;
+							width: 100%;
+							margin-bottom: 5px;
+							p {
+								margin-bottom: 0;
+								float: left;
+								font-size: 14px;
+								font-family: Microsoft YaHei;
+								font-weight: 400;
+								color: #ffffff;
+							}
+							.plate {
+								width: 100px;
+							}
+							.names {
+								width: calc(100% - 180px);
+								margin-right: 4px;
+                            }
+                            .command{
+                                width: calc(100% - 80px);
+								margin-right: 4px;
+                            }
+							.btn {
+								width: 76px;
+								height: 20px;
+								background: rgba(0, 255, 169, 0.39);
+								border: 1px solid #00ffa9;
+								border-radius: 3px;
+								font-size: 12px;
+								font-family: Microsoft YaHei;
+								font-weight: bold;
+								color: #00ffa9;
+								text-align: center;
+                                line-height: 18px;
+							}
+							.onbtn {
+								width: 76px;
+								height: 20px;
+								font-size: 12px;
+								font-family: Microsoft YaHei;
+								font-weight: bold;
+								background: rgba(105, 225, 255, 0.39);
+								border: 1px solid #69e1ff;
+								border-radius: 3px;
+								color: #69e0ff;
+								text-align: center;
+                                line-height: 18px;
+							}
+						}
+						.line {
+							width: 100%;
+							height: 2px;
+							background: #259bf1;
+							opacity: 0.1;
+							margin-top: 10px;
+							margin-bottom: 10px;
+						}
+					}
+				}
+			}
+
+			.infor {
+				width: 50%;
+				float: right;
+				position: relative;
+				padding-left: 17px;
+				box-sizing: border-box;
+				.detail {
+					width: 100%;
+					.item {
+						width: 100%;
+
+						overflow: hidden;
+						// span {
+						// 	color: #5ABFFBFF;
+						//     position: relative;
+						//     text-decoration: underline;
+						// }
+						p {
+							margin-bottom: 0;
+							float: left;
+							font-size: 14px;
+							font-family: Source Han Sans CN;
+							font-weight: 400;
+							color: #fefffe;
+							line-height: 24px;
+							text-align: justify;
+						}
+						.tit {
+							width: 70px;
+						}
+						.text {
+							width: calc(100% - 70px);
+						}
+						.ontext {
+							width: calc(100% - 70px);
+							float: left;
+							color: #5ABFFBFF;
+							text-decoration: underline;
+						}
+						// span::after {
+						// 	position: absolute;
+						// 	bottom: -4px;
+						// 	left: 0;
+						// 	content: '';
+						// 	height: 1px;
+						// 	background: #5ABFFBFF;
+						// 	width: 100%;
+						// }
+					}
+				}
+			}
+			.infor::before {
+				position: absolute;
+				left: 0;
+				top: 0;
+				background: #259bf1;
+				opacity: 0.3;
+				width: 1px;
+				height: 538px;
+				content: '';
+				margin-right: 17px;
+			}
+		}
+	}
+}

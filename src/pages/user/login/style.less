@@ -1,0 +1,116 @@
+@import '~antd/es/style/themes/default.less';
+
+.main {
+  // margin: 0 auto;
+  position: absolute;
+  top: 30%;
+  right: 15%;
+  // width: 368px;
+  width: 430px;
+
+  @media screen and (max-width: @screen-sm) {
+    width: 95%;
+  }
+
+  :global {
+    .ant-form-item {
+      margin: 0 2px 40px;
+    }
+
+    .ant-btn-lg {
+      height: 52px;
+    }
+
+    .ant-input-affix-wrapper {
+      input {
+        padding: 25px 50px !important;
+        color: #fff;
+        font-size: 18px;
+        background: #0e2460;
+        border: 1px solid #0e2460;
+        border-color: rgba(93, 149, 242, 0.75);
+        outline: none;
+        box-shadow: 0 0 4px #2291b3;
+        transition: border linear 0.2s, box-shadow linear 0.5s;
+      }
+
+      input::input-placeholder {
+        color: #d1d5e0;
+      }
+
+      /* 有些资料显示需要写，有些显示不需要，但是在编辑器webstorm中该属性不被识别 */
+      ::-webkit-input-placeholder {
+        /* WebKit browsers */
+        color: #d1d5e0;
+      }
+    }
+
+    .has-error {
+      input {
+        background-color: #0e2460 !important;
+        border-color: #0e2460 !important;
+      }
+    }
+  }
+
+  .prefixImg {
+    width: 60%;
+  }
+
+  .title {
+    margin-bottom: 40px;
+    text-align: center;
+
+    .loginTitle {
+      //width: 85%;
+        font-size: 32px;
+        font-weight: bold;
+        background-image:-webkit-linear-gradient(45deg, #1596f0,#3a8ae9,#5554e4);
+        -webkit-background-clip:text;
+        -webkit-text-fill-color:transparent;
+    }
+  }
+
+  .icon {
+    margin-left: 16px;
+    color: rgba(0, 0, 0, 0.2);
+    font-size: 24px;
+    vertical-align: middle;
+    cursor: pointer;
+    transition: color 0.3s;
+
+    &:hover {
+      color: @primary-color;
+    }
+  }
+
+  .other {
+    margin-top: 24px;
+    line-height: 22px;
+    text-align: left;
+
+    .register {
+      float: right;
+    }
+  }
+
+  :global {
+    .antd-pro-login-submit {
+      width: 100%;
+      margin-top: 24px;
+    }
+  }
+}
+.buttonStyle{
+  // background-image: url('@/assets/loginButton.png');
+  border: 0;
+  // background-repeat: no-repeat;
+  // background-size: 100% 100%;
+  // background-position: center;
+  background-image: linear-gradient(#333399, #333366 );
+}
+.containerImg{
+  position: absolute;
+  top: 0;
+  left: 0;
+}

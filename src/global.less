@@ -1,0 +1,332 @@
+@import '~antd/es/style/themes/default.less';
+@import 'utils/leaflet.less';
+@import 'utils/minemap.less';
+html,
+body,
+#root {
+    height: 100%;
+}
+
+.colorWeak {
+    filter: invert(80%);
+}
+
+.ant-layout {
+    min-height: 100vh;
+}
+
+canvas {
+    display: block;
+}
+
+body {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+button {
+    border: 0;
+}
+
+@them-dark: #222851;
+@font-color: rgba(0, 0, 0, 0.65);
+@thems-color: #1f274c;
+
+:global {
+    .ant-modal-title {
+        color: #fff;
+    }
+    .ant-modal-close-x {
+        color: #fff;
+    }
+    .ant-tree li .ant-tree-node-content-wrapper:hover {
+        background-color: #1f274c;
+    }
+    .ant-calendar-time-picker-inner {
+        background-color: #323d70;
+        background-image: linear-gradient(180deg, #2b3361 25%, #1b2448 100%);
+    }
+    .ant-tree li .ant-tree-node-content-wrapper.ant-tree-node-selected {
+        background-color: #03a1f5;
+    }
+    .ant-tree.ant-tree-directory > li span.ant-tree-node-content-wrapper:hover::before,
+    .ant-tree.ant-tree-directory
+        .ant-tree-child-tree
+        > li
+        span.ant-tree-node-content-wrapper:hover::before {
+        background: #03a1f5;
+    }
+    .ant-calendar-range.ant-calendar-time .ant-calendar-time-picker-combobox {
+        background-color: #323d70;
+        background-image: linear-gradient(180deg, #2b3361 25%, #1b2448 100%);
+    }
+    .ant-calendar-year-panel {
+        background-color: #323d70;
+        background-image: linear-gradient(180deg, #2b3361 25%, #1b2448 100%);
+    }
+    .ant-spin-nested-loading > div > .ant-spin {
+        background-color: #1f274c;
+        max-height: none;
+    }
+
+    li.ant-calendar-time-picker-select-option-selected {
+        background-color: #323d70;
+        background-image: linear-gradient(180deg, #2b3361 25%, #1b2448 100%);
+    }
+    .ant-calendar-range.ant-calendar-time .ant-calendar-time-picker {
+        height: 1px;
+    }
+    .ant-btn-primary:active,
+    .ant-btn-primary.active {
+        background-color: #40a9ff;
+        border-color: #40a9ff;
+    }
+    .ant-calendar-range.ant-calendar-time .ant-calendar-time-picker-combobox {
+        background-color: #323d70;
+        background-image: linear-gradient(180deg, #2b3361 25%, #1b2448 100%);
+        // border: 1px solid #303b50
+    }
+    .ant-calendar-time-picker {
+        background-color: #323d70;
+        background-image: linear-gradient(180deg, #2b3361 25%, #1b2448 100%);
+    }
+    .ant-btn-primary:hover,
+    .ant-btn-primary:focus {
+        background-color: #1890ff;
+        border-color: #1890ff;
+    }
+    .ant-calendar-time .ant-calendar-day-select {
+        color: #fff;
+    }
+    .parentPolygon {
+        background: #ef1030 !important;
+    }
+    .childPolygon {
+        background: #ff7b02 !important;
+    }
+    .borPolygon {
+        background: #008fff !important;
+    }
+    .breakPoint {
+        background: #008fff !important;
+    }
+    .tourPoint {
+        background: #008fff !important;
+    }
+    .patrolRoutes {
+        background: #01a472 !important;
+    }
+    .patrolGrid {
+        background: #ef1030 !important;
+    }
+
+    .anticon {
+        // color: #c4d0dd;
+    }
+
+    .ant-layout {
+        // min-height: 100%;
+        height: 100%;
+        // padding-top: 32px;
+        box-sizing: border-box;
+        // padding: 50px 50px 50px 150px;
+        width: 100%;
+    }
+    .ant-table-header {
+        overflow: hidden;
+        background: #1f274c;
+    }
+    .ant-table-fixed-header > .ant-table-content > .ant-table-scroll > .ant-table-body {
+        position: relative;
+        background: #1f274c;
+    }
+
+    /*
+::-webkit-scrollbar 滚动条整体部分
+::-webkit-scrollbar-track 滚动条的轨道（里面装有Thumb）
+::-webkit-scrollbar-track-piece 内层轨道
+::-webkit-scroll-thumb 滚动条里面的小方块，能向上向下移动（或往左往右移动，取决于是垂直滚动条还是水平滚动条）
+::-webkit-scrollbar-button 滚动条的轨道的两端按钮
+::-webkit-scrollbar-corner 边角，即两个滚动条的交汇处
+*/
+
+    /*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
+    ::-webkit-scrollbar {
+        //   width: 4px;
+        //   height: 4px;
+        background-color: #1f274c;
+        width: 5px;
+    }
+    /*定义滚动条轨道 内阴影+圆角*/
+    ::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        // border-radius: 10px;
+        background-color: #1f274c;
+    }
+    /*定义滑块 内阴影+圆角*/
+    ::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        background-color: #aaa;
+    }
+    /* 两个滚动条的交汇处*/
+    ::-webkit-scrollbar-corner {
+        background-color: #1f274c;
+    }
+
+    .ant-layout-header {
+        padding: 0 20px;
+        background: #1f274c;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        width: 100%;
+    }
+
+    .ant-form-item-label > label {
+        color: rgba(255, 255, 255, 0.85);
+    }
+
+    .ant-pagination-prev .ant-pagination-item-link,
+    .ant-pagination-next .ant-pagination-item-link {
+        background-color: @them-dark;
+        background-image: linear-gradient(180deg, #31386c 25%, @them-dark 100%);
+        border: 1px solid @them-dark;
+    }
+
+    .ant-pagination-item {
+        background-color: @them-dark;
+        background-image: linear-gradient(180deg, #31386c 25%, @them-dark 100%);
+        border: 1px solid @them-dark;
+    }
+
+    .ant-pagination-item-active a {
+        color: #fff;
+    }
+
+    .ant-pagination-item-active {
+        background-color: @them-dark;
+        background-image: linear-gradient(180deg, #31386c 25%, @them-dark 100%);
+        border-color: #1d6e85;
+    }
+    .ant-table-thead > tr > th,
+    .ant-table-tbody > tr > td {
+        padding: 12px 16px;
+    }
+    .ant-menu-dark,
+    .ant-menu-dark .ant-menu-sub {
+        color: rgba(255, 255, 255, 0.65);
+        background: #1f274c !important;
+    }
+
+    .ant-select-dropdown {
+        background-color: @them-dark;
+    }
+
+    .ant-select-dropdown-menu-item-active:not(.ant-select-dropdown-menu-item-disabled) {
+        background-color: #39457a;
+    }
+
+    .ant-select-dropdown-menu-item-selected {
+        background-color: #39457a;
+    }
+
+    .ant-select-dropdown-menu-item:hover:not(.ant-select-dropdown-menu-item-disabled) {
+        background-color: #46528a;
+    }
+
+    .ant-calendar {
+        background-color: #323d70;
+        background-image: linear-gradient(180deg, #2b3361 25%, #1b2448 100%);
+        border: 1px solid #303b50;
+    }
+
+    .ant-dropdown-menu-item,
+    .ant-dropdown-menu-submenu-title {
+        color: #fff;
+    }
+    .ant-dropdown-menu-item-active {
+        color: @font-color;
+    }
+    .ant-message-notice {
+        color: @font-color;
+    }
+
+    .ant-empty {
+        color: #fff;
+    }
+
+    .ant-select-selection__clear {
+        background-color: @thems-color;
+    }
+
+    .ant-calendar-picker-clear {
+        background-color: @thems-color;
+
+        &:hover {
+            color: #c4d0dd;
+        }
+    }
+
+    .ant-pagination-item-ellipsis {
+        color: #fff !important;
+    }
+
+    .ant-input-number {
+        background: hsl(229, 42%, 21%) !important;
+        border: 0;
+    }
+
+    .ant-table-placeholder {
+        background-color: #323d70;
+        border: 1px solid #323d70;
+    }
+
+    .ant-switch {
+        background: #eee;
+    }
+
+    .ant-switch-checked {
+        background: #01c267;
+    }
+}
+
+@media (max-width: @screen-xs) {
+    .ant-table {
+        width: 100%;
+        overflow-x: auto;
+
+        &-thead > tr,
+        &-tbody > tr {
+            > th,
+            > td {
+                white-space: pre;
+
+                > span {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+/* -------overlay地图样式修改------- */
+.ol-overlay-container {
+    // opacity: 0.7;
+}
+
+/* --------日期控件显示----------- */
+.react-calendar__month-view__days__day--weekend {
+    color: white;
+}
+
+.react-calendar__month-view__days__day--neighboringMonth {
+    color: #ccc;
+}

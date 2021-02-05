@@ -1,0 +1,123 @@
+@import '~antd/es/style/themes/default.less';
+@import '../../utils/pagination.less';
+@thems-color: hsl(229, 42%, 21%);
+
+.alarming {
+  // display: flex;
+  height: 100%;
+
+}
+
+
+.tableListForm {
+    margin-top: 30px;
+    input:-internal-autofill-selected{
+      background-color: @thems-color !important;
+    }
+    :global {
+        .ant-upload.ant-upload-select-picture-card{
+          background-color: #333367;
+        }
+        
+      .ant-form-item {
+        display: flex;
+        margin-right: 0;
+        margin-bottom: 24px;
+       
+      //   >.ant-form-item-label {
+      //     width: auto;
+      //     padding-right: 8px;
+      //     line-height: 32px;
+      //   }
+  
+        .ant-form-item-control {
+        //   line-height: 32px;
+        }
+      }
+  
+      .ant-form-item-control-wrapper {
+        flex: 1;
+      }
+  
+      .ant-form-item-label>label {
+        color: rgba(255, 255, 255, 0.85);
+      }
+  
+      .ant-input {
+        background-color: @thems-color;
+        border: 0;
+      }
+  
+      .ant-select-selection {
+        background-color: @thems-color;
+        border: 0;
+      }
+  
+      .ant-select-dropdown {
+        background-color: @thems-color;
+      }
+  
+      
+    }
+  
+    .submitButtons {
+      display: flex;
+      // justify-content: flex-end;
+      margin-bottom: 24px;
+      white-space: nowrap;
+  
+      .submitButton {
+        // width: 90px;
+        margin-left: 20px;
+      }
+    }
+  }
+  
+  
+  .tableListCard {
+    background: #323d70;
+  
+    :global {
+      .ant-card-body {
+        padding: 0;
+      }
+      
+      .ant-table-row-expand-icon{
+        background: none ;
+      }
+      a{
+        color: #fff;
+      }
+      tr.ant-table-expanded-row, tr.ant-table-expanded-row:hover{
+        background: #323d70;
+      }
+      .ant-table-thead>tr>th {
+        color: rgba(255, 255, 255, 0.85);
+        background: #1f274c;
+        border-bottom: 1px solid #1f274c;
+      }
+  
+      .ant-table-tbody>tr>td {
+        border-bottom: 1px solid #1f283a;
+        background: #253163;
+      }
+  
+      .ant-table-tbody>tr:hover:not(.ant-table-expanded-row):not(.ant-table-row-selected)>td {
+        background: #1f274c;
+      }
+    }
+  .headTitle{
+    width: 100%;
+    overflow: hidden;
+    .h2Color {
+      padding: 15px 0 5px 20px;
+      color: @text-color;
+      float: left;
+    }
+    .addCarBtn{
+      float: right;
+      margin: 15px ;
+    }
+  }
+    
+  }
